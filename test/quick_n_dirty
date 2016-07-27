@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+
+here=$( dirname $(dirname $( readlink -f ${0} ) ) )
+
+export PYTHONPATH=${here}
+
+echo ""
+echo "export PYTHONPATH=${here}"
+echo ""
+
+if [ "${1}" == "-p" ] ; then
+   exit 0
+fi
+
+cat <<PY  > /tmp/scram_$$.py
+#!/usr/bin/env python
+
+import test.test
+
+test.test.run ()
+
+PY
+
+chmod a+rx /tmp/scram_$$.py
+/tmp/scram_$$.py "$@"
+rm -f /tmp/scram_$$.py
+
+# end
