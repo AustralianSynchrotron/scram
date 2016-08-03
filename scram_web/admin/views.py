@@ -5,6 +5,7 @@ from . import admin_blueprint
 @admin_blueprint.route('/<page>')
 def show_page(page):
     try:
-        return "<h1>/admin/%s</h1>" % page # TODO: render_template
+        #return "<h1>/admin/%s</h1>" % page # TODO: render_template
+        return render_template('login.html')
     except TemplateNotFound:
         abort(404)

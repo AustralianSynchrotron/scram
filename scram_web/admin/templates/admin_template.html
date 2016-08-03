@@ -1,0 +1,37 @@
+ {% extends "bootstrap/base.html" %}
+
+{% block title %}
+{# set a default title for all admin pages. This can be overwritten on individual templates #}
+Admin 101
+{% endblock %}
+
+{% block styles %}
+{# common styles for all admin templates #}
+    {{ super() }}
+
+{% endblock %}
+
+{% block navbar %}
+{# put here a common navbar for all admin templates #}
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/" title="s.c.r.a.m.">
+                <img class="brand-img" alt="Brand" src="/static/img/logo.png">
+
+            </a>
+            <p class="navbar-text"><a class="brand-link" href="/" title="Superior Control Room Alarm Management"> s.c.r.a.m. </a></p>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Config</a></li>
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+{# common scripts for all admin templates #}
+    {{ super() }}
+
+
+{% endblock %}
