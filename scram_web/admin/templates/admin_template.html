@@ -8,7 +8,9 @@ Admin 101
 {% block styles %}
 {# common styles for all admin templates #}
     {{ super() }}
+    <link href="/bootstrap-custom.css" rel="stylesheet">
 
+    <link rel="shortcut icon" href="/favicon.png">
 {% endblock %}
 
 {% block navbar %}
@@ -16,7 +18,7 @@ Admin 101
     <div class="navbar navbar-default">
         <div class="navbar-header">
             <a class="navbar-brand" href="/" title="s.c.r.a.m.">
-                <img class="brand-img" alt="Brand" src="/static/img/logo.png">
+                <img class="brand-img" alt="Brand" src="/logo.png">
 
             </a>
             <p class="navbar-text"><a class="brand-link" href="/" title="Superior Control Room Alarm Management"> s.c.r.a.m. </a></p>
