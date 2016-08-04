@@ -6,10 +6,12 @@ from config import server_debug
 
 app = Flask(__name__)
 app.config['BOOTSTRAP_SERVE_LOCAL'] = True
+if server_debug:
+    app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
 # Register blueprints
-app.register_blueprint(admin_blueprint,url_prefix='/admin')
-app.register_blueprint(common_blueprint)
+app.register_blueprint(admin_blueprint, url_prefix='/admin')
+app.register_blueprint(common_blueprint, url_prefix='/common')
 
 # Specify local files for local networks
 flask_bootstrap.StaticCDN(static_endpoint='/static')

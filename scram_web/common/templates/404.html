@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>You've ripped a hole in the fabric of the internet</title>
-    <link rel="stylesheet" href="{{ url_for( 'static','/css/404.css') }}" type="text/css" />
-    <link rel="shortcut icon" href="/static/img/favicon.png">
-    <script src="/static/js/snap.svg-min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('common.static',filename='css/404.css') }}" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="{{ url_for('common.static',filename='js/snap.svg-min.js') }}"></script>
 </head>
 
 <body>
 
-<!-- <img src="/static/images/tron-art-01.jpg" alt="Page Not Found (404)." style="position: absolute; left: 50%; top: 50%; margin-left: -285px; margin-top: -190px;"> -->
+<a href="/"><img src="{{ url_for('common.static', filename='img/logo.png') }}"></a>
 
 <div>
     <svg id="svg-404" width="800px" viewBox="0 0 700 700" preserveAspectRatio="xMidyMid meet" ></svg>
 </div>
 <script>
     var paper = Snap("#svg-404");
-    Snap.load("/static/img/bearded_404b.svg",onDrawingLoaded);
+    Snap.load("{{ url_for('common.static',filename='img/bearded_404b.svg') }}",onDrawingLoaded);
     function onDrawingLoaded(data){
         paper.append(data);
     }
