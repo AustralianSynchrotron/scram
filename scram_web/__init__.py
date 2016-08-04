@@ -21,3 +21,5 @@ flask_bootstrap.Bootstrap(app)
 
 if server_debug:
     print(app.url_map)
+
+from . import views
