@@ -1,7 +1,6 @@
 from flask import Flask
 import flask_bootstrap
 from .admin.views import admin_blueprint
-from .common.views import common_blueprint
 from config import server_debug
 
 app = Flask(__name__)
