@@ -10,7 +10,7 @@ if server_debug:
 
 # Register blueprints
 app.register_blueprint(admin_blueprint, url_prefix='/admin')
-app.register_blueprint(common_blueprint, url_prefix='/common')
+#app.register_blueprint(common_blueprint, url_prefix='/common')
 
 # Specify local files for local networks
 flask_bootstrap.StaticCDN(static_endpoint='/static')
