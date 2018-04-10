@@ -11,3 +11,4 @@ if server_debug:
     print("Data loaded from config.py: ",server_host,server_port,server_debug)
 
 # TODO: add database connection config here
+

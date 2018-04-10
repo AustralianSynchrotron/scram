@@ -34,3 +34,4 @@ def show_error_404():
 def page_not_found(e):
     # return url_for(show_error_404),404
     return render_template('404.html'),404
+
